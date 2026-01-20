@@ -30,6 +30,9 @@ class bankaccount_ATM:
                 self._balance -= amount
                 print(f"New balance is {self._balance}.")
 
+    def __repr__(self):
+        return f"{self.owner} ${self._balance}"
+
 # Save list of objects in the database file
 def save_database(accounts):
     with open('database.pickle', 'wb') as file:
@@ -51,6 +54,7 @@ def menu(account):
             save_database(accounts)
 
         elif choice == '3':
+            amount = float(input("Amount to withdraw: "))
             account.withdraw_money(amount)
             save_database(accounts)
 
@@ -67,7 +71,13 @@ with open('database.pickle', 'rb') as file:
     accounts = pickle.load(file)
 log_in()
 
+
+
 # New user creation
-account = bankaccount_ATM("Lia", 5000)
-accounts.append(account)
-save_database(accounts)
+# accounts = []
+# account1 = bankaccount_ATM("Ana", 1000)
+# account2 = bankaccount_ATM("Gio", 800)
+# accounts.append(account1)
+# accounts.append(account2)
+# print(accounts)
+# save_database(accounts)

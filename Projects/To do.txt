@@ -1,5 +1,0 @@
-1) Books ვალიდაცია
-2) @property და სხვა დეკორატეროების ზუსტი ფუნქციები
-3) self._title = title _ ზუსტად რისთვის გამოიყენება
-4) encapsulation, inheritance და სხვა
-5) ATM + მეორე OOP პროექტი

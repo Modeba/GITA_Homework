@@ -5,6 +5,7 @@ book_manager = book_library.BookManager()
 
 while True:
     # Display menu
+    print('\n', "-" * 20)
     user_choice = input("Please select option:\n1 - Add new book\n2 - View all books\n3 - Search for the book using the title\n")
 
     if user_choice == '1':
@@ -24,10 +25,11 @@ while True:
     elif user_choice == '2':
         print("Full library")
         book_manager.show_library()
-        print("-" * 20)
     
     # Look up book by the title
     elif user_choice == '3':
         title = input("Please input the title of the book\n")
         book_manager.look_up_book(title)
-
+    
+    else:
+        break

@@ -57,8 +57,5 @@ class BookManager:
     # Iterate over the array and find the "book" object with matching "title" property
     def look_up_book(self, title):
         for book in self._books:
-            if book.title == title:
+            if title.lower() in book.title.lower():
                 print(book)
-                break
-        else:
-            print("Book not found")
